@@ -14,6 +14,8 @@ share the same value, using pool.map with multiprocessing.
 Yes, you can assign ex. 4 simultaneous workers per function!
 '''
 
+# EDIT: Interestingly, this doesn't speed up the time it takes to add +1 to a shared value, most likely due to how locking works.
+
 
 def add_func_1(total, lock):
     logging.info("First")
